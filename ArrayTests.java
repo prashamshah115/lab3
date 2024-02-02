@@ -24,9 +24,21 @@ public class ArrayTests {
   }
 
   @Test
-public void testReversed1() {
-  int[] input1 = {2,3,4,5};
-  assertArrayEquals(new int[]{5,4,3,2}, ArrayExamples.reversed(input1));
+   public void testReversed1() {
+    int[] input1 = {2,3,4,5};
+    assertArrayEquals(new int[]{5,4,3,2}, ArrayExamples.reversed(input1));
+  }
 
-}
+  @SuppressWarnings("deprecation")
+  @Test
+  public void testAverage() { 
+    double[] input1 = {0};
+    double[] input2 = {2,5,6,7};
+
+    assertEquals(0.0, ArrayExamples.averageWithoutLowest(input1),0.001);
+    assertEquals(6.0, ArrayExamples.averageWithoutLowest(input2), 0.001);
+  }
+
+
+
 }
